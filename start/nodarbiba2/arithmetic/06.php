@@ -24,4 +24,4 @@ function cozaLozaWoza($low, $high)
     }
 }
 
-echo cozaLozaWoza(1, 110);
+cozaLozaWoza(1, 110);
