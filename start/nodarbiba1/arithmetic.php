@@ -70,14 +70,31 @@ echo(PHP_EOL);
 echo "Exercise 5:\n";
 
 $myNumber = rand(1, 100);
+$guessAmount = 3;
+$guessed = false;
 
-echo "I am thinking of a number between 1 and 100. Try to guess it.\n";
-$guess = readline("Enter a number: ");
+while ($guessed == false || $guessAmount > 0) {//
 
-if ($guess < $myNumber) {
-    echo "Sorry, you are too low, i was thinking of $myNumber";
-} else if ($guess > $myNumber) {
-    echo "Sorry, you are too high. I was thinking of $myNumber";
-} else {
-    echo "You guessed it! What are the odds?!?";
+    echo "I am thinking of a number between 1 and 100. Try to guess it.\n";
+    $guess = (int)readline("Enter a number: ");
+
+
+    if (empty($myNumber)) {
+        echo "Please enter a valid number";
+    }
+
+    if ($guess <= 0 || $guess > 100) {
+        echo "Please enter a valid number";
+        exit;
+    }
+
+
+    if ($guess < $myNumber) {
+        echo "Sorry, you are too low, i was thinking of $myNumber";
+    } else if ($guess > $myNumber) {
+        echo "Sorry, you are too high. I was thinking of $myNumber";
+    } else {
+        echo "You guessed it! What are the odds?!?";
+    }
+    $guessAmount--;
 }
