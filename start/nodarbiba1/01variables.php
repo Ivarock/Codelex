@@ -10,6 +10,7 @@ $string = 'Hello world!';
 $variable = ($integer . ' ' . number_format($float, 2) . ' ' . $string);
 echo $variable;
 
+
 echo(PHP_EOL);
 
 // Exercise 2
