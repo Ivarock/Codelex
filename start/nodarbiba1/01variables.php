@@ -7,7 +7,6 @@ $integer = 10;
 $float = 10.10;
 $string = 'Hello world!';
 
-
 $variable = ($integer . ' ' . number_format($float, 2) . ' ' . $string);
 echo $variable;
 
