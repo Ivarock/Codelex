@@ -22,13 +22,13 @@ function displayField($board)
 }
 
 // Function to check if a move is valid
-function isValidMove($board, $row, $column)
+function isValidMove($board, $row, $column): bool
 {
     return ($row >= 0 && $row < 3) && ($column >= 0 && $column < 3) && ($board[$row][$column] === ' ');
 }
 
 // Function to check for a win
-function checkWin($board, $player)
+function checkWin($board, $player): bool
 {   // Check rows
     for ($i = 0; $i < 3; $i++) {
         if ($board[$i][0] === $player && $board[$i][1] === $player && $board[$i][2] === $player) {
@@ -53,7 +53,7 @@ function checkWin($board, $player)
 
 // Function to check for a tie
 
-function checkTie($board)
+function checkTie($board): bool
 {
     foreach ($board as $row) {
         if (in_array(' ', $row)) {
