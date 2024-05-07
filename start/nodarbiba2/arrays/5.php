@@ -80,6 +80,7 @@ while (true) {
     // Validate the move
     if (!isValidMove($board, $row, $column)) {
         echo "Invalid move! Try again." . PHP_EOL;
+        continue;
     }
     // Make the move
     $board[$row][$column] = $players[$currentPlayer];
