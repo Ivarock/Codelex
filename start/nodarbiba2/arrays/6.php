@@ -28,8 +28,8 @@ while ($guesses < $maxGuesses) {
         $wordParts[$letterPosition] = '-';
 
         if (implode('', $targetWord) === $word) {
-            echo "Correct! The word was: " . $word . PHP_EOL;
             echo implode(' ', $targetWord) . PHP_EOL;
+            echo "Correct! The word was: " . $word . PHP_EOL;
             break;
         }
     }
