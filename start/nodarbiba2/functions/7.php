@@ -62,6 +62,7 @@ $store = new Gunstore($guns);
 $person = new Person('John Shooter', ["A", "B", "C"], 5000);
 
 echo $person->name . " can buy the following guns: \n";
+
 foreach ($store->guns as $gun) {
     if ($store->availableGuns($person, $gun)) {
         echo $gun->name . " - Price: " . $gun->price . "\n";
